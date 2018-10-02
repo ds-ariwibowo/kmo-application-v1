@@ -1,0 +1,123 @@
+﻿body 
+{
+    font-family: Calibri;
+    font-size:12px;
+}
+
+a
+{
+    text-decoration:none !important;
+}
+
+a:hover
+{
+    color:red;   
+}
+
+.center { text-align:center; }
+.left { float:left; }
+.right { float:right; }
+.clear { clear:both; }
+
+table tr th { text-align: center; }
+table tr th a { color: #FFFFFF; font-weight: normal; }
+table tr th a:hover { color: #DDD; }
+.tbl_head, .tbl_foot, .tbl_page { background-color: #999999; font-size: 12px; color: #FFFFFF;} 
+.tbl_page { text-align: left; }
+tr.tbl_page td table tbody tr td a, tr.tbl_page td table tbody tr td span  { padding:0 2px; }
+tr.tbl_page td table tbody tr td a  { color:white; }
+tr.tbl_page td table tbody tr td a:hover  { color:red; }
+tr.tbl_page td table tbody tr td span  { color:black; }
+
+.body_content { padding:10px; }
+
+.div_maxchar
+{
+    text-align:right;
+    font-style:italic;
+}
+
+.header1 
+{
+    height:10px;
+    /* fallback DIY*/
+
+    /* Safari 4-5, Chrome 1-9 */
+    background: -webkit-gradient(linear, left top, right top, from(rgb(191,213,234)), color-stop(0.10, rgb(191,213,234)), color-stop(0.90, rgb(5,87,173)), to(rgb(5,87,173)));
+
+    /* Safari 5.1+, Chrome 10+ */
+    background: -webkit-linear-gradient(left, rgb(191,213,234) 10%, rgb(5,87,173), rgb(5,87,173) 90%, rgb(5,87,173));
+
+    /* Firefox 3.6+ */
+    background: -moz-linear-gradient(left, rgb(191,213,234) 10%, rgb(5,87,173), rgb(5,87,173) 90%, rgb(5,87,173));
+
+    /* IE 10 */
+    background: -ms-linear-gradient(left, rgb(191,213,234) 10%, rgb(5,87,173), rgb(5,87,173) 90%, rgb(5,87,173));
+
+    /* Opera 11.10+ */
+    background: -o-linear-gradient(left, rgb(191,213,234) 10%, rgb(5,87,173), rgb(5,87,173) 90%, rgb(5,87,173));
+}
+
+.footer 
+{
+    background: rgb(180,221,243);
+    
+    /* Safari 4-5, Chrome 1-9 */
+    background: -webkit-gradient(linear, left top, right top, from(rgb(255,255,255)), color-stop(0.10, rgb(255,225,255)), color-stop(0.90, rgb(180,221,243)), to(rgb(180,221,243)));
+
+    /* Safari 5.1+, Chrome 10+ */
+    background: -webkit-linear-gradient(left, rgb(255,255,255) 10%, rgb(180,221,243), rgb(180,221,243) 90%, rgb(180,221,243));
+
+    /* Firefox 3.6+ */
+    background: -moz-linear-gradient(left, rgb(255,255,255) 10%, rgb(180,221,243), rgb(180,221,243) 90%, rgb(180,221,243));
+
+    /* IE 10 */
+    background: -ms-linear-gradient(left, rgb(255,255,255) 10%, rgb(180,221,243), rgb(180,221,243) 90%, rgb(180,221,243));
+
+    /* Opera 11.10+ */
+    background: -o-linear-gradient(left, rgb(255,255,255) 10%, rgb(180,221,243), rgb(180,221,243) 90%, rgb(180,221,243));
+}
+
+#parentMenu {<!--  w ww .  j a v  a 2 s .  co  m-->
+  display: block;
+  top: 0;
+}
+/* Helps position submenu */
+.dropdown-submenu {
+  position: relative;
+}
+/* Menus under the submenu should show up on the right of the parent */
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  -webkit-border-radius: 0 6px 6px 6px;
+  -moz-border-radius: 0 6px 6px 6px;
+  border-radius: 0 6px 6px 6px;
+}
+/* Make submenu visible when hovering on link */
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+/* Add carot to submenu links */
+.dropdown-submenu>a:after {
+  display: block;
+  float: right;
+  /*simple */
+  content: "?";
+  color: #cccccc;
+  /* looks a little better */
+  content: " ";
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+/* Change carot color on hover */
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;

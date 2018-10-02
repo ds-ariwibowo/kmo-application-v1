@@ -1,0 +1,102 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SitePublic.Master.cs" Inherits="KMOWEBAPPS.SitePublicMaster" %>
+
+<%@ Register Src="~/Control/C_Meta.ascx" TagName="C_Meta" TagPrefix="CMT" %>
+<%@ Register Src="~/Control/C_Style.ascx" TagName="C_Style" TagPrefix="CST" %>
+<%@ Register Src="~/Control/C_ScriptLibrary.ascx" TagName="C_ScriptLibrary" TagPrefix="CSCL" %>
+<%@ Register Src="~/Control/C_Script.ascx" TagName="C_Script" TagPrefix="CSC" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title>CAR KMO</title>
+    <CMT:C_Meta ID="C_Meta" runat="server" />
+    <CST:C_Style ID="C_Style" runat="server" />
+    <CSCL:C_ScriptLibrary ID="C_ScriptLibrary" runat="server" />
+
+    <asp:ContentPlaceHolder ID="CPH_HEAD" runat="server" />
+</head>
+<body>
+<form id="Form1" runat="server">
+<div class="container">
+    <div class="row">
+        <!-- Header -->
+        <div class="col-xs-12">
+            <!-- Header : Logo & Partner -->
+            <div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-2">
+                        <img src="<%= Page.ResolveUrl("~") %>Assets/_img/logo-car.png" style="padding:10px 0; margin:0 auto;" class="img-responsive" />
+                    </div>
+                    <div class="col-xs-12 col-sm-7">
+                        
+                    </div>
+                    <div class="col-xs-12 col-sm-1">
+                        <img src="<%= Page.ResolveUrl("~") %>Assets/_img/logo-mari-berasuransi.png" style="padding:10px 0; margin:0 auto;" class="img-responsive" />
+                    </div>
+                    <div class="col-xs-12 col-sm-1">
+                        <img src="<%= Page.ResolveUrl("~") %>Assets/_img/logo-aaji.png" style="padding:10px 0; margin:0 auto;" class="img-responsive" />
+                    </div>
+                    <div class="col-xs-12 col-sm-1">
+                        <img src="<%= Page.ResolveUrl("~") %>Assets/_img/logo-ojk.png" style="padding:10px 0; margin:0 auto;" class="img-responsive" />
+                    </div>
+                    <div class="col-xs-12 col-sm-12">
+                        <div style="border-top:solid 2px red;"></div>
+                        <div style="border-top:solid 1px white;"></div>
+                        <div class="header1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="min-height:430px;">
+        <!-- Body -->
+        <div class="col-xs-12">
+            <!-- Body : Content -->
+            <asp:ContentPlaceHolder ID="CPH_BODY_CONTENT" runat="server" />
+        </div>
+    </div>
+    <div class="row">
+        <!-- Footer -->
+        <div class="col-xs-12">
+            <!-- Footer : Customer Service -->
+            <div class="row footer" style="margin:0;">
+                
+                    <div class="col-xs-12 col-sm-1" style="padding:0;">
+                        <img src="<%= Page.ResolveUrl("~") %>Assets/_img/customer_support_24hour.jpg" style="margin:0 auto;" class="img-responsive" />
+                    </div>
+                    <div class="col-xs-12 col-sm-11">
+                        <div class="row" style="padding-top:5px;">
+                            <div class="col-xs-12 col-sm-4">
+                                <b>Hotline Claim Customer Service</b><br />
+                                (021) 2673-7474 | 0812-19774774
+                            </div>
+                            <div class="col-xs-12 col-sm-4">
+                                <b>Hotline Claim Medical Doctor</b><br />
+                                (021) 3296-9649 | 3763-4638
+                            </div>
+                            <div class="col-xs-12 col-sm-4">
+                                <b>Hotline Swipe Card</b><br />
+                                (021) 2700-678
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <!-- Footer : Term & Condition, Copyright -->
+            <div class="center">
+                <br />
+                <div style="border-top:solid 2px #CCC;"></div>
+                <br />
+                <span style="color:red;">Terms & Condition</span> | <span style="color:red;">Privacy Policy</span> | Copyright &copy; 2015 CAR Life Insurance. All Rights Reserved.<br />
+                <br />
+            </div>
+        </div>
+    </div>
+</div>
+</form>
+<CSC:C_Script ID="C_Script" runat="server" />
+<asp:ContentPlaceHolder ID="CPH_SCRIPT" runat="server" />
+</body>
+</html>

@@ -1,0 +1,926 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="get_list_pengajuan">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NO_POLIS" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NO_PENGAJUAN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NAMA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PERIODE_MASUK_DARI" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PERIODE_MASUK_SAMPAI" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NO_BATCH" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_list_pengajuanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_list_pengajuanResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_list_pengajuan_supervisor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NO_POLIS" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NO_PENGAJUAN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NAMA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PERIODE_MASUK_DARI" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PERIODE_MASUK_SAMPAI" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NO_BATCH" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_list_pengajuan_supervisorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_list_pengajuan_supervisorResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_list_pengajuan_underwriting">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NO_POLIS" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NO_PENGAJUAN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NAMA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PERIODE_MASUK_DARI" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PERIODE_MASUK_SAMPAI" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NO_BATCH" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_list_pengajuan_underwritingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_list_pengajuan_underwritingResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_list_dokumen_pengajuan">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NO_POLIS" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NO_PENGAJUAN" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_list_dokumen_pengajuanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_list_dokumen_pengajuanResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_data_detail_pengajuan">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NO_PENGAJUAN" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_data_detail_pengajuanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_data_detail_pengajuanResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ddl_list_bank">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NO_POLIS" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ddl_list_bankResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_ddl_list_bankResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ddl_list_jenis_dokumen_pengajuan">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_ddl_list_jenis_dokumen_pengajuanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_ddl_list_jenis_dokumen_pengajuanResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ddl_polis_login_userid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ddl_polis_login_useridResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_ddl_polis_login_useridResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_userid_info">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_userid_infoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_userid_infoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ddl_list_premium_type">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NO_POLIS" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ddl_list_premium_typeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_ddl_list_premium_typeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_news_type">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NEWS_TYPE" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_news_typeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_news_typeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validate_userpass">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validate_userpassResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="validate_userpassResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ins_dokumen_pengajuan">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GENERATE_ID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DOC_TYPE_ID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="DOC_NAME_ORI" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DOC_NAME_MOD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DOC_LOC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ENTRY_USER" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ins_dokumen_pengajuanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ins_dokumen_pengajuanResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updt_status">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GENERATE_ID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="prev_STATUS_ID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="next_STATUS_ID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MODE" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updt_statusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="updt_statusResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="del_dokumen_pengajuan">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NO_PENGAJUAN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NAMA_DOKUMEN" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="del_dokumen_pengajuanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="del_dokumen_pengajuanResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ins_pengajuan">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BRANCH_ID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="BANK_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NO_REK" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NAMA_PEMILIK_REK" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PENGHASILAN_PER_TAHUN" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="SUMBER_PENDANAAN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TUJUAN_PENGAJUAN_MENJADI_PESERTA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UANG_PERTANGGUNGAN" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="PREMI_SEKALIGUS" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="TINGKAT_BUNGA_PER_TAHUN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MULAI_PERTANGGUNGAN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AKHIR_PERTANGGUNGAN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NAMA_PENERIMA_MANFAAT_ASURANSI" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NO_POLIS_1" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="JUMLAH_1" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="NAMA_PERUSAHAAN_1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NO_POLIS_2" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="JUMLAH_2" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="NAMA_PERUSAHAAN_2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DEBITUR_NAMA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DEBITUR_JENIS_KELAMIN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DEBITUR_NIK" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DEBITUR_LAHIR_TEMPAT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DEBITUR_LAHIR_TANGGAL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DEBITUR_EMAIL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DEBITUR_PEKERJAAN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PESERTA_ALAMAT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PESERTA_KOTA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PESERTA_KODE_POS" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PESERTA_TELP" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PESERTA_FAX" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KORESPONDENSI_ALAMAT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KORESPONDENSI_KOTA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KORESPONDENSI_KODE_POS" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KORESPONDENSI_TELP" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KORESPONDENSI_FAX" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Q1_BADAN_BERAT" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Q1_BADAN_TINGGI" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Q2_PERAWATAN_OPSI" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Q2_PERAWATAN_DESC" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Q3_DIRAWAT_OPSI" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Q3_DIRAWAT_DESC" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Q4_MENDERITA_OPSI" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Q4_MENDERITA_DESC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SES_NO_POLIS" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ins_pengajuanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ins_pengajuanResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="upd_pengajuan">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BRANCH_ID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="BANK_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NO_REK" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NAMA_PEMILIK_REK" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PENGHASILAN_PER_TAHUN" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="SUMBER_PENDANAAN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TUJUAN_PENGAJUAN_MENJADI_PESERTA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UANG_PERTANGGUNGAN" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="PREMI_SEKALIGUS" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="TINGKAT_BUNGA_PER_TAHUN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MULAI_PERTANGGUNGAN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AKHIR_PERTANGGUNGAN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NAMA_PENERIMA_MANFAAT_ASURANSI" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NO_POLIS_1" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="JUMLAH_1" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="NAMA_PERUSAHAAN_1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NO_POLIS_2" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="JUMLAH_2" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="NAMA_PERUSAHAAN_2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DEBITUR_NAMA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DEBITUR_JENIS_KELAMIN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DEBITUR_NIK" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DEBITUR_LAHIR_TEMPAT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DEBITUR_LAHIR_TANGGAL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DEBITUR_EMAIL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DEBITUR_PEKERJAAN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PESERTA_ALAMAT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PESERTA_KOTA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PESERTA_KODE_POS" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PESERTA_TELP" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PESERTA_FAX" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KORESPONDENSI_ALAMAT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KORESPONDENSI_KOTA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KORESPONDENSI_KODE_POS" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KORESPONDENSI_TELP" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KORESPONDENSI_FAX" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Q1_BADAN_BERAT" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Q1_BADAN_TINGGI" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Q2_PERAWATAN_OPSI" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Q2_PERAWATAN_DESC" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Q3_DIRAWAT_OPSI" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Q3_DIRAWAT_DESC" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Q4_MENDERITA_OPSI" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Q4_MENDERITA_DESC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SES_NO_POLIS" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NO_REGISTRATION" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="upd_pengajuanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="upd_pengajuanResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="get_list_pengajuanSoapIn">
+    <wsdl:part name="parameters" element="tns:get_list_pengajuan" />
+  </wsdl:message>
+  <wsdl:message name="get_list_pengajuanSoapOut">
+    <wsdl:part name="parameters" element="tns:get_list_pengajuanResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_list_pengajuan_supervisorSoapIn">
+    <wsdl:part name="parameters" element="tns:get_list_pengajuan_supervisor" />
+  </wsdl:message>
+  <wsdl:message name="get_list_pengajuan_supervisorSoapOut">
+    <wsdl:part name="parameters" element="tns:get_list_pengajuan_supervisorResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_list_pengajuan_underwritingSoapIn">
+    <wsdl:part name="parameters" element="tns:get_list_pengajuan_underwriting" />
+  </wsdl:message>
+  <wsdl:message name="get_list_pengajuan_underwritingSoapOut">
+    <wsdl:part name="parameters" element="tns:get_list_pengajuan_underwritingResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_list_dokumen_pengajuanSoapIn">
+    <wsdl:part name="parameters" element="tns:get_list_dokumen_pengajuan" />
+  </wsdl:message>
+  <wsdl:message name="get_list_dokumen_pengajuanSoapOut">
+    <wsdl:part name="parameters" element="tns:get_list_dokumen_pengajuanResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_data_detail_pengajuanSoapIn">
+    <wsdl:part name="parameters" element="tns:get_data_detail_pengajuan" />
+  </wsdl:message>
+  <wsdl:message name="get_data_detail_pengajuanSoapOut">
+    <wsdl:part name="parameters" element="tns:get_data_detail_pengajuanResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_ddl_list_bankSoapIn">
+    <wsdl:part name="parameters" element="tns:get_ddl_list_bank" />
+  </wsdl:message>
+  <wsdl:message name="get_ddl_list_bankSoapOut">
+    <wsdl:part name="parameters" element="tns:get_ddl_list_bankResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_ddl_list_jenis_dokumen_pengajuanSoapIn">
+    <wsdl:part name="parameters" element="tns:get_ddl_list_jenis_dokumen_pengajuan" />
+  </wsdl:message>
+  <wsdl:message name="get_ddl_list_jenis_dokumen_pengajuanSoapOut">
+    <wsdl:part name="parameters" element="tns:get_ddl_list_jenis_dokumen_pengajuanResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_ddl_polis_login_useridSoapIn">
+    <wsdl:part name="parameters" element="tns:get_ddl_polis_login_userid" />
+  </wsdl:message>
+  <wsdl:message name="get_ddl_polis_login_useridSoapOut">
+    <wsdl:part name="parameters" element="tns:get_ddl_polis_login_useridResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_userid_infoSoapIn">
+    <wsdl:part name="parameters" element="tns:get_userid_info" />
+  </wsdl:message>
+  <wsdl:message name="get_userid_infoSoapOut">
+    <wsdl:part name="parameters" element="tns:get_userid_infoResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_ddl_list_premium_typeSoapIn">
+    <wsdl:part name="parameters" element="tns:get_ddl_list_premium_type" />
+  </wsdl:message>
+  <wsdl:message name="get_ddl_list_premium_typeSoapOut">
+    <wsdl:part name="parameters" element="tns:get_ddl_list_premium_typeResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_news_typeSoapIn">
+    <wsdl:part name="parameters" element="tns:get_news_type" />
+  </wsdl:message>
+  <wsdl:message name="get_news_typeSoapOut">
+    <wsdl:part name="parameters" element="tns:get_news_typeResponse" />
+  </wsdl:message>
+  <wsdl:message name="validate_userpassSoapIn">
+    <wsdl:part name="parameters" element="tns:validate_userpass" />
+  </wsdl:message>
+  <wsdl:message name="validate_userpassSoapOut">
+    <wsdl:part name="parameters" element="tns:validate_userpassResponse" />
+  </wsdl:message>
+  <wsdl:message name="ins_dokumen_pengajuanSoapIn">
+    <wsdl:part name="parameters" element="tns:ins_dokumen_pengajuan" />
+  </wsdl:message>
+  <wsdl:message name="ins_dokumen_pengajuanSoapOut">
+    <wsdl:part name="parameters" element="tns:ins_dokumen_pengajuanResponse" />
+  </wsdl:message>
+  <wsdl:message name="updt_statusSoapIn">
+    <wsdl:part name="parameters" element="tns:updt_status" />
+  </wsdl:message>
+  <wsdl:message name="updt_statusSoapOut">
+    <wsdl:part name="parameters" element="tns:updt_statusResponse" />
+  </wsdl:message>
+  <wsdl:message name="del_dokumen_pengajuanSoapIn">
+    <wsdl:part name="parameters" element="tns:del_dokumen_pengajuan" />
+  </wsdl:message>
+  <wsdl:message name="del_dokumen_pengajuanSoapOut">
+    <wsdl:part name="parameters" element="tns:del_dokumen_pengajuanResponse" />
+  </wsdl:message>
+  <wsdl:message name="ins_pengajuanSoapIn">
+    <wsdl:part name="parameters" element="tns:ins_pengajuan" />
+  </wsdl:message>
+  <wsdl:message name="ins_pengajuanSoapOut">
+    <wsdl:part name="parameters" element="tns:ins_pengajuanResponse" />
+  </wsdl:message>
+  <wsdl:message name="upd_pengajuanSoapIn">
+    <wsdl:part name="parameters" element="tns:upd_pengajuan" />
+  </wsdl:message>
+  <wsdl:message name="upd_pengajuanSoapOut">
+    <wsdl:part name="parameters" element="tns:upd_pengajuanResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="get_list_pengajuan">
+      <wsdl:input message="tns:get_list_pengajuanSoapIn" />
+      <wsdl:output message="tns:get_list_pengajuanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_list_pengajuan_supervisor">
+      <wsdl:input message="tns:get_list_pengajuan_supervisorSoapIn" />
+      <wsdl:output message="tns:get_list_pengajuan_supervisorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_list_pengajuan_underwriting">
+      <wsdl:input message="tns:get_list_pengajuan_underwritingSoapIn" />
+      <wsdl:output message="tns:get_list_pengajuan_underwritingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_list_dokumen_pengajuan">
+      <wsdl:input message="tns:get_list_dokumen_pengajuanSoapIn" />
+      <wsdl:output message="tns:get_list_dokumen_pengajuanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_data_detail_pengajuan">
+      <wsdl:input message="tns:get_data_detail_pengajuanSoapIn" />
+      <wsdl:output message="tns:get_data_detail_pengajuanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ddl_list_bank">
+      <wsdl:input message="tns:get_ddl_list_bankSoapIn" />
+      <wsdl:output message="tns:get_ddl_list_bankSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ddl_list_jenis_dokumen_pengajuan">
+      <wsdl:input message="tns:get_ddl_list_jenis_dokumen_pengajuanSoapIn" />
+      <wsdl:output message="tns:get_ddl_list_jenis_dokumen_pengajuanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ddl_polis_login_userid">
+      <wsdl:input message="tns:get_ddl_polis_login_useridSoapIn" />
+      <wsdl:output message="tns:get_ddl_polis_login_useridSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_userid_info">
+      <wsdl:input message="tns:get_userid_infoSoapIn" />
+      <wsdl:output message="tns:get_userid_infoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ddl_list_premium_type">
+      <wsdl:input message="tns:get_ddl_list_premium_typeSoapIn" />
+      <wsdl:output message="tns:get_ddl_list_premium_typeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_news_type">
+      <wsdl:input message="tns:get_news_typeSoapIn" />
+      <wsdl:output message="tns:get_news_typeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="validate_userpass">
+      <wsdl:input message="tns:validate_userpassSoapIn" />
+      <wsdl:output message="tns:validate_userpassSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ins_dokumen_pengajuan">
+      <wsdl:input message="tns:ins_dokumen_pengajuanSoapIn" />
+      <wsdl:output message="tns:ins_dokumen_pengajuanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updt_status">
+      <wsdl:input message="tns:updt_statusSoapIn" />
+      <wsdl:output message="tns:updt_statusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="del_dokumen_pengajuan">
+      <wsdl:input message="tns:del_dokumen_pengajuanSoapIn" />
+      <wsdl:output message="tns:del_dokumen_pengajuanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ins_pengajuan">
+      <wsdl:input message="tns:ins_pengajuanSoapIn" />
+      <wsdl:output message="tns:ins_pengajuanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="upd_pengajuan">
+      <wsdl:input message="tns:upd_pengajuanSoapIn" />
+      <wsdl:output message="tns:upd_pengajuanSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="get_list_pengajuan">
+      <soap:operation soapAction="http://tempuri.org/get_list_pengajuan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_list_pengajuan_supervisor">
+      <soap:operation soapAction="http://tempuri.org/get_list_pengajuan_supervisor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_list_pengajuan_underwriting">
+      <soap:operation soapAction="http://tempuri.org/get_list_pengajuan_underwriting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_list_dokumen_pengajuan">
+      <soap:operation soapAction="http://tempuri.org/get_list_dokumen_pengajuan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_data_detail_pengajuan">
+      <soap:operation soapAction="http://tempuri.org/get_data_detail_pengajuan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ddl_list_bank">
+      <soap:operation soapAction="http://tempuri.org/get_ddl_list_bank" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ddl_list_jenis_dokumen_pengajuan">
+      <soap:operation soapAction="http://tempuri.org/get_ddl_list_jenis_dokumen_pengajuan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ddl_polis_login_userid">
+      <soap:operation soapAction="http://tempuri.org/get_ddl_polis_login_userid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_userid_info">
+      <soap:operation soapAction="http://tempuri.org/get_userid_info" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ddl_list_premium_type">
+      <soap:operation soapAction="http://tempuri.org/get_ddl_list_premium_type" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_news_type">
+      <soap:operation soapAction="http://tempuri.org/get_news_type" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validate_userpass">
+      <soap:operation soapAction="http://tempuri.org/validate_userpass" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ins_dokumen_pengajuan">
+      <soap:operation soapAction="http://tempuri.org/ins_dokumen_pengajuan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updt_status">
+      <soap:operation soapAction="http://tempuri.org/updt_status" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="del_dokumen_pengajuan">
+      <soap:operation soapAction="http://tempuri.org/del_dokumen_pengajuan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ins_pengajuan">
+      <soap:operation soapAction="http://tempuri.org/ins_pengajuan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="upd_pengajuan">
+      <soap:operation soapAction="http://tempuri.org/upd_pengajuan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="get_list_pengajuan">
+      <soap12:operation soapAction="http://tempuri.org/get_list_pengajuan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_list_pengajuan_supervisor">
+      <soap12:operation soapAction="http://tempuri.org/get_list_pengajuan_supervisor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_list_pengajuan_underwriting">
+      <soap12:operation soapAction="http://tempuri.org/get_list_pengajuan_underwriting" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_list_dokumen_pengajuan">
+      <soap12:operation soapAction="http://tempuri.org/get_list_dokumen_pengajuan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_data_detail_pengajuan">
+      <soap12:operation soapAction="http://tempuri.org/get_data_detail_pengajuan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ddl_list_bank">
+      <soap12:operation soapAction="http://tempuri.org/get_ddl_list_bank" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ddl_list_jenis_dokumen_pengajuan">
+      <soap12:operation soapAction="http://tempuri.org/get_ddl_list_jenis_dokumen_pengajuan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ddl_polis_login_userid">
+      <soap12:operation soapAction="http://tempuri.org/get_ddl_polis_login_userid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_userid_info">
+      <soap12:operation soapAction="http://tempuri.org/get_userid_info" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ddl_list_premium_type">
+      <soap12:operation soapAction="http://tempuri.org/get_ddl_list_premium_type" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_news_type">
+      <soap12:operation soapAction="http://tempuri.org/get_news_type" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validate_userpass">
+      <soap12:operation soapAction="http://tempuri.org/validate_userpass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ins_dokumen_pengajuan">
+      <soap12:operation soapAction="http://tempuri.org/ins_dokumen_pengajuan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updt_status">
+      <soap12:operation soapAction="http://tempuri.org/updt_status" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="del_dokumen_pengajuan">
+      <soap12:operation soapAction="http://tempuri.org/del_dokumen_pengajuan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ins_pengajuan">
+      <soap12:operation soapAction="http://tempuri.org/ins_pengajuan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="upd_pengajuan">
+      <soap12:operation soapAction="http://tempuri.org/upd_pengajuan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://localhost:64026/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://localhost:64026/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
